@@ -1,0 +1,60 @@
+.slider-container 
+{
+  height: 60vh;
+}
+
+.slider-container img 
+{
+  flex: 0 0 100%;
+  height: 60vh;
+}
+
+.carousel
+{
+  position: relative;
+  animation: ani 10s forwards;
+  left: 0;
+}
+
+.customPosition
+{
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -100%);
+  color: aliceblue;
+}
+
+
+#next:hover, #prev:hover
+{
+  color: #dc3545;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.customContainerButtonSlide
+{
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.customButtonSlide
+{
+  width: 25px;
+  height: 3px;
+  border-radius: 4px;
+  background-color: rgba(240, 248, 255, 0.856);
+}
+
+.customButtonSlide:hover
+{
+  background-color: #dc3545;
+  transition: background-color 0.3s ease;
+}
+
+.buttonSlide0
+{
+  background-color: #dc3545;
+}

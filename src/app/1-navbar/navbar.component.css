@@ -1,0 +1,36 @@
+.customHoverText
+{
+    border-bottom: #ffffff 3px  solid;
+}
+
+.customHoverText:hover, .selectedNavItem
+{
+    border-bottom: #dc3545 3px  solid;
+}
+
+.customBadge
+{
+    font-size: x-small;
+    top: 5px;
+}
+
+@media(max-width: 576px)  
+{
+    .customSize
+    {
+        width: 100%;
+    }  
+    
+    .customHoverText
+    {
+        border-bottom: #ffffff 0px  solid;
+        border-left: #ffffff 2px  solid;
+    }
+
+    .customHoverText:hover, .selectedNavItem
+    {
+        border-bottom: #dc3545 0px  solid;
+        border-left: #dc3545 2px  solid;
+        background-color: rgb(247, 240, 240);
+    }
+}

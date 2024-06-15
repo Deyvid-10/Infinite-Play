@@ -1,0 +1,69 @@
+<!-- Estructura para los artículos en vistazo al carrito -->
+ 
+<main class="customContainer mt-4 mb-2">
+
+    <section class="row">
+        <section class="col-lg-4 col-xl-4 px-1 mb-2 order-lg-2">
+            <section class="card pb-3">
+                <h5 class="border-bottom border-secondary-subtle p-2 mx-2">Detalle del pedido</h5>
+            
+                <div class="row mx-3">
+                    <p class="col-6 p-0 mb-1">Sub-total ({{quantity}} articulos):</p>
+                    <p class="col-6 p-0 mb-1 text-end">RD$ {{sub_total.toLocaleString('en-US')}}</p>
+                </div>
+
+                <div class="row border-bottom border-secondary-subtle mx-2 px-2">
+                    <p class="col-6 p-0">Impuestos (18%):</p>
+                    <p class="col-6 p-0 text-end">RD$ {{(sub_total * 0.18).toLocaleString('en-US')}}</p>
+                </div>
+
+                <div class="row mx-3">
+                    <p class="col-6 p-0">Total de orden:</p>
+                    <p class="col-6 p-0 text-end">RD$ {{(sub_total + (sub_total * 0.18)).toLocaleString('en-US')}}</p>
+                </div>
+
+                <div class="mx-3 d-flex justify-content-center customButtonDesabled"><button (click)="toPay()" [disabled]="articlesCart.length == 0" type="button" class="btn btn-danger w-100">Proceder a pago</button></div>
+            </section>
+        </section>
+        <section class="col-lg-8 col-xl-8 px-1 mb-2">
+            <section class="card pb-3">
+                <h5 class="border-bottom border-secondary-subtle p-2 mx-2">Articulos en el carrito</h5>
+            
+                <article *ngFor="let article of articlesCart" class="d-flex border-bottom border-secondary-subtle p-2 mx-2" >
+                    <figure class="m-0">
+                        <img src={{article.img}} class="p-0 customImg" alt="imagen del articulo {{article.title}}">
+                    </figure>
+                    <div class="d-flex flex-column justify-content-between p-0 ps-2">
+                        <div>
+                            <h6 class="card-title hideLines hideTitle">{{article.title}}</h6>
+                            <p class="card-text hideLines hideLines2">{{article.description}}</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                            <div class="d-flex flex-wrap">
+                                <button (click)="buttonDeleteFromCart(article)" class="m-0 me-2 my-2 border rounded-5 px-2 customButtonSecondary">Eliminar</button>
+                                <select *ngIf="article.quantity < 10" (change)="quantityFromCart($event, article)" class="me-2 my-2 border rounded-5 px-2 cursor-pointer customButtonSecondary">
+                                    <option value=1 [selected]="article.quantity == 1">1</option>
+                                    <option value=2 [selected]="article.quantity == 2">2</option>
+                                    <option value=3 [selected]="article.quantity == 3">3</option>
+                                    <option value=4 [selected]="article.quantity == 4">4</option>
+                                    <option value=5 [selected]="article.quantity == 5">5</option>
+                                    <option value=6 [selected]="article.quantity == 6">6</option>
+                                    <option value=7 [selected]="article.quantity == 7">7</option>
+                                    <option value=8 [selected]="article.quantity == 8">8</option>
+                                    <option value=9 [selected]="article.quantity == 9">9</option>
+                                    <option value=10>+10</option>
+                                  </select>
+                                  <input *ngIf="article.quantity >= 10" value={{article.quantity}} (change)="quantityFromCart($event, article)" class="m-0 me-2 my-2 border rounded-5 px-3 customInputSecondary" type="number" >
+                            </div>
+                            
+                            <h6 class="m-0">RD$ {{article.price.toLocaleString('en-US')}}</h6>
+                        </div>
+                    </div>
+                </article>
+
+                <p *ngIf="articlesCart.length == 0" class="text-center mt-4">No hay articulos disponibles</p>
+
+            </section>
+        </section>
+    </section>
+</main>

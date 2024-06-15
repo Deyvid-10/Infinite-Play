@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+.customLogo
+{
+    font-family: cursive;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+.customArticle
+{
+    box-shadow: 0px 0px 2px 0.5px rgba(69, 69, 69, 0.1);
+    width: 250px;
+}
+
+.customArticle:hover
+{
+    box-shadow: 0px 0px 2px 2px rgba(87, 87, 87, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.customHoverIcons
+{
+    color: #000000;
+}
+
+.customHoverIcons:hover
+{
+    color: #dc3545;
+    transition: color 0.3s ease;
+}
+
+.customButtonSecondary, .customInputSecondary
+{
+    background-color: rgb(250, 250, 250);
+}
+
+.customInputSecondary
+{
+    width: 90px;
+}
+
+.customButtonSecondary:hover
+{
+    background-color: rgb(245, 245, 245);
+    transition: background-color 0.3s ease;
+}
+
+.customButtonDesabled:hover
+{
+    cursor: no-drop;
+}
+
+
+.hideLines
+{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3; 
+  text-overflow: ellipsis; 
+}
+
+.hideTitle
+{
+  -webkit-line-clamp: 1;
+}
+
+.hideLines2
+{
+  -webkit-line-clamp: 4; 
+}
+
+.customImg
+{
+  width: 200px;
+}
+
+.containerCustomImgArticle
+{
+    height: 200px;
+}
+
+@media (max-width: 576px) {
+
+  .customImg 
+  {
+      width: 50%;
+      height: 50%;
+  }
+}
+
+.customContainer
+{
+    margin: 0 auto;
+    width: 1300px;
+}
+
+@media (max-width: 1400px) 
+{
+    .customContainer
+    {
+        width: 1150px;
+    }
+}
+
+@media (max-width: 1200px)
+{
+    .customContainer
+    {
+        padding: 0 30px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px)
+{
+    .customContainer
+    {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .customArticle
+    {
+        width: 18rem;
+    }
+}

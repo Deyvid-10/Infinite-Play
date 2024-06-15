@@ -1,0 +1,48 @@
+<nav class="bg-light px-md-5 px-sm-3 px-2 py-2 d-sm-flex align-items-center d-block container-fluid">
+
+    <div class="d-flex justify-content-between align-items-center customSize">
+        <a class="navbar-brand fs-5 d-flex align-items-center customLogo" routerLink="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="m-1 text-danger" viewBox="0 0 16 16">
+                <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2"/>
+                <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23"/>
+                </svg>
+            Infinite Play
+        </a>
+        
+        <svg (click)="menu()" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="d-sm-none customHoverIcons cursor-pointer" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        
+    </div>
+
+    <div class="d-sm-flex justify-content-between align-items-center w-100" [ngClass]='{"d-none" : isMenu}'>
+        <ul class="d-sm-flex d-block flex-row navbar-nav px-sm-3 py-sm-0 p-2">
+            <li>
+                <a routerLink="/" class="nav-link px-1" [ngClass]="currentPage === '/' ? 'selectedNavItem' : 'customHoverText'">Inicio</a>
+            </li>
+            <li>
+                <a routerLink="/productos" class="nav-link px-1" [ngClass]="currentPage === '/productos' ? 'selectedNavItem' : 'customHoverText'">Productos</a>
+            </li>
+        </ul>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <a routerLink="/carrito" class="position-relative h-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="customHoverIcons" viewBox="0 0 16 16">
+                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                </svg>
+                <span *ngIf="quatityOnCart > 0" class="position-absolute translate-middle badge rounded-pill bg-danger customBadge">
+                {{quatityOnCart}}
+                </span>
+            </a>
+            <!-- <a routerLink="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-person mt-2 ms-3 customHoverIcons" viewBox="0 0 16 16">
+                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.256 7a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m-.646-4.854.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 0 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 .708-.708"/>
+                </svg>
+            </a> -->
+        </div>
+    </div>
+   
+
+
+</nav>

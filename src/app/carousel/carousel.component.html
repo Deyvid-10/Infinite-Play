@@ -1,0 +1,24 @@
+<section class="position-relative">
+    <figure class="d-flex w-100 overflow-hidden slider-container">
+        <figure class="d-flex carousel" id="carousel">
+            <img src={{img}} class="w-100 object-fit-cover" alt="img slide" *ngFor="let img of imgs">
+        </figure>
+    </figure>
+
+    <div class="d-flex justify-content-between w-100 px-sm-4 px-md-5 px-1 customPosition" >
+        <svg id="prev" (click)="transition(0, 0)" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg>
+        <span></span>
+        <svg id="next" (click)="transition(1, 0)" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+        </svg>
+    </div>
+
+    <div class="d-flex customContainerButtonSlide cursor-pointer">
+        <div *ngFor="let img of imgs">
+            <div (click)="buttonAction(imgs.indexOf(img))" class="mx-1 customButtonSlide buttonSlide{{imgs.indexOf(img)}}"></div>
+        </div>
+    </div>
+
+</section>
