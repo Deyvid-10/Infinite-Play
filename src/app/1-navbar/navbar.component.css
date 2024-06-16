@@ -33,6 +33,11 @@
     text-decoration: none;
 }
 
+.menuLog a:hover
+{
+    text-decoration: underline;
+}
+
 .searchForm input
 {
     height: 35px;
