@@ -1,6 +1,6 @@
 .customHoverText
 {
-    border-bottom: #ffffff 3px  solid;
+    border-bottom: #f8f9fa 3px  solid;
 }
 
 .customHoverText:hover, .selectedNavItem
@@ -12,6 +12,36 @@
 {
     font-size: x-small;
     top: 5px;
+}
+
+.menuLog
+{
+    position: absolute;
+    right: -40px;
+    z-index: 1;
+    width: 300px;
+    visibility: hidden;
+}
+
+.user:hover .menuLog
+{
+    visibility: visible;
+}
+
+.menuLog a
+{
+    text-decoration: none;
+}
+
+.searchForm input
+{
+    height: 35px;
+    width: 500px;
+}
+
+.searchForm button
+{
+    height: 35px;   
 }
 
 @media(max-width: 576px)  

@@ -1,4 +1,4 @@
-<section class="py-4 d-block d-md-flex">
+<section class="py-1 d-block d-md-flex">
     <button (click)="filterMenu()" class="d-md-none me-5 m-0 mb-2 ms-5 border border-secondary rounded-5 px-2 customButtonSecondary" type="button">Filtrar</button>
     <div (click)="filterMenu()" *ngIf="showFilter === true" class="position-fixed top-0 left-0 z-1 backdrop d-md-none"></div>
     <section [ngClass]="{'d-none': showFilter === false}" class="d-md-flex justify-content-center bg-light z-2 p-3 overflow-y-auto filterContainer">
