@@ -1,3 +1,29 @@
-<section class="py-4">
+<section class="py-4 d-block d-md-flex">
+    <button (click)="filterMenu()" class="d-md-none me-5 m-0 mb-2 ms-5 border border-secondary rounded-5 px-2 customButtonSecondary" type="button">Filtrar</button>
+    <div (click)="filterMenu()" *ngIf="showFilter === true" class="position-fixed top-0 left-0 z-1 backdrop d-md-none"></div>
+    <section [ngClass]="{'d-none': showFilter === false}" class="d-md-flex justify-content-center bg-light z-2 p-3 overflow-y-auto filterContainer">
+        <section >
+            <div class="d-flex justify-content-between">
+                <h6>Filtros</h6>
+                <button (click)="filterMenu()" type="button" class="btn-close d-md-none"></button>
+            </div>
+            <h6 class="filter">Marcas</h6>
+            <div class="ms-2" *ngFor="let filter of filterBrand">
+                <input type="checkbox" value="{{filter}}" name="marcas" class="me-1 cursor-pointer" id="{{filter}}">
+                <label class="cursor-pointer" for="{{filter}}">{{filter}}</label>
+            </div>
+            <h6 class="mt-1">Consolas</h6>
+            <div class="ms-2" *ngFor="let filter of filterConsole">
+                <input type="checkbox" value="{{filter}}" name="consolas" class="me-1 cursor-pointer" id="{{filter}}">
+                <label class="cursor-pointer" for="{{filter}}">{{filter}}</label>
+            </div>
+            <h6 class="mt-1">Articulos</h6>
+            <div class="ms-2" *ngFor="let filter of filterArticles">
+                <input type="checkbox" value="{{filter}}" name="articulos" class="me-1 cursor-pointer" id="{{filter}}">
+                <label class="cursor-pointer" for="{{filter}}">{{filter}}</label>
+            </div>
+        </section>
+
+    </section>
     <app-articles [articles]="articlesProducts"></app-articles>
 </section>

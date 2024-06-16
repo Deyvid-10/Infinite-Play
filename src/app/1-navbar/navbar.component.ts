@@ -27,6 +27,7 @@ export class NavbarComponent {
 
   // Inyecta los servicios de manejo de variable
   private manageVariable = inject (ManageVariableService)
+  private data = inject (DataService)
 
   // actualiza la cantidad de articulos en el carrito
   quatityOnCart: number = 0
@@ -36,6 +37,8 @@ export class NavbarComponent {
     this.manageVariable.updateQuantity().subscribe(value => {
       this.quatityOnCart  = value
     })
+
+    this.manageVariable.updateDetail(this.data.updateArticlesCart())
   }
 
   // Función para el menú desplegable

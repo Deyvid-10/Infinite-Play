@@ -40,8 +40,8 @@
                         </div>
                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                             <div class="d-flex flex-wrap">
-                                <button (click)="buttonDeleteFromCart(article)" class="m-0 me-2 my-2 border rounded-5 px-2 customButtonSecondary">Eliminar</button>
-                                <select *ngIf="article.quantity < 10" (change)="quantityFromCart($event, article)" class="me-2 my-2 border rounded-5 px-2 cursor-pointer customButtonSecondary">
+                                <button (click)="buttonDeleteFromCart(article)" class="m-0 me-2 my-2 border border-secondary rounded-5 px-2 customButtonSecondary">Eliminar</button>
+                                <select *ngIf="article.quantity < 10" (change)="quantityFromCart($event, article)" class="me-2 my-2 border border-secondary rounded-5 px-2 cursor-pointer customButtonSecondary">
                                     <option value=1 [selected]="article.quantity == 1">1</option>
                                     <option value=2 [selected]="article.quantity == 2">2</option>
                                     <option value=3 [selected]="article.quantity == 3">3</option>

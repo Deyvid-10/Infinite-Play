@@ -1,0 +1,25 @@
+.filterContainer
+{
+    min-width: 199px;
+    height: 100vh;
+    top: 12px;
+    position: sticky;
+}
+
+@media (max-width: 768px)
+{
+    .filterContainer
+    {
+        width: 250px;
+        position: fixed;
+        top: 0;
+    }
+}
+
+.backdrop
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: .5;
+}
