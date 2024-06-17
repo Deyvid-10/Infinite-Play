@@ -11,6 +11,7 @@ import { FooterComponent } from './5-footer/footer.component';
 import { NavbarComponent } from './1-navbar/navbar.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { NavLinksComponent } from './nav-links/nav-links.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     FooterComponent,
     NavbarComponent,
     ArticlesComponent,
-    CarouselComponent
+    CarouselComponent,
+    NavLinksComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+.customHoverText
+{
+    border-bottom: #f8f9fa 3px  solid;
+}
+
+.customHoverText:hover, .selectedNavItem
+{
+    border-bottom: #dc3545 3px  solid;
+}
+
+@media(max-width: 576px)  
+{
+    .customHoverText:hover, .selectedNavItem
+    {
+        border-bottom: #dc3545 0px  solid;
+        border-left: #dc3545 2px  solid;
+        background-color: rgb(247, 240, 240);
+    }
+
+    .customHoverText
+    {
+        border-bottom: #ffffff 0px  solid;
+        border-left: #ffffff 2px  solid;
+    }
+}

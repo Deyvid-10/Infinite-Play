@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
   import { Router, NavigationEnd } from '@angular/router';
 import { DataService } from '../data.service';
 import { ManageVariableService } from '../manage-variable.service';
@@ -37,7 +37,7 @@ export class NavbarComponent {
   // Creación del formulario
   searchForm: FormGroup = this.fb.group({})
 
-  ngOnInit()
+  ngOnInit(): void
   {
     // actualiza la cantidad de articulos en el carrito
     this.manageVariable.updateQuantity().subscribe(value => {
@@ -50,6 +50,10 @@ export class NavbarComponent {
     this.searchForm = this.fb.group({
       search: ["", Validators.required]
     })
+
+    // Verifica el tamano de la pantalla
+    window.innerWidth < 576 ? this.screenSize = true : this.screenSize = false
+
   }
 
   // Obtiene el valor del formulaario
@@ -73,5 +77,15 @@ export class NavbarComponent {
   search(): void
   {
     this.showSearch = !this.showSearch
+    console.log(this.showSearch); 
   }
+
+  // Detectar el tamano de la pantalla
+  screenSize: boolean = false
+ 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) { 
+    event.target.innerWidth < 576 ? this.screenSize = true : this.screenSize = false
+  }
+
 }

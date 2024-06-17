@@ -46,7 +46,7 @@
 .customHoverIcons:hover
 {
     color: #dc3545;
-    transition: color 0.3s ease;
+    transition: color 0.4s ease;
 }
 
 .customButtonSecondary, .customInputSecondary
