@@ -1,6 +1,7 @@
-import { Component, Renderer2, inject} from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { DataService } from '../data.service';
 
+// Tipado para el objeto de articulos
 interface TypesToArticles
 {
   id: number
@@ -10,12 +11,26 @@ interface TypesToArticles
   img: string
 }
 
+// Tipado para los iconos de las plataformas
+interface TypesToPlataform
+{
+  name: string,
+  img: string
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  // Objeto que contiene las imágenes de la sección plataformas
+  plataformInfo: TypesToPlataform[] = 
+                        [{name: "Play Station", img: "./assets/img/ps.avif"},
+                        {name: "Xbox", img: "./assets/img/xbox.avif"},
+                        {name: "Nintendo", img: "./assets/img/nintendo.webp"},
+                        {name: "PC", img: "./assets/img/pc.png"}] 
 
   ngOnInit(): void
   {

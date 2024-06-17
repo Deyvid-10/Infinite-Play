@@ -23,9 +23,9 @@
     text-decoration: none;
 }
 
-.menuLog a:hover
+.itemsMenuLog:hover
 {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 .searchForm

@@ -1,7 +1,19 @@
 <app-carousel></app-carousel>
 
-<section class="bg-outstanding p-4">
+<section class="p-4">
     <h2 class="text-center mb-3">Articulos destacados</h2>
 
     <app-articles [articles]="articlesOutstanding"></app-articles>
+</section>
+
+<section class="p-4 bgPlataform">
+    <h2 class="text-center mb-3">Plataformas</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+        <a routerLink="/productos" class="mb-3 text-decoration-none" *ngFor="let info of plataformInfo">
+            <figure class="card overflow-hidden rounded-circle mx-5 customPlataform">
+                <img class="object-fit-cover w-100 h-100" src={{info.img}} alt="imagen de {{info.name}}">
+            </figure>
+            <h5 class="text-center text-dark">{{info.name}}</h5>
+        </a>
+    </div>
 </section>

@@ -1,5 +1,10 @@
-.bg-outstanding
+.customPlataform
 {
-  background-color: rgb(245, 245, 250);
+  width: 200px;
+  height: 200px;
 }
 
+.customPlataform h5
+{
+  text-decoration: none;
+}

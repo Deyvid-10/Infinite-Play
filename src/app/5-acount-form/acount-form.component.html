@@ -1,0 +1,29 @@
+<section class="bg-light pt-5 space">
+    
+    <form class="card p-4 customCard mx-auto">
+        <h4 *ngIf="currentPage === '/login'">Iniciar sesión</h4>
+        <h4 *ngIf="currentPage === '/signup'">Crear cuenta</h4>
+
+        <label class="fw-bold" for="name">Nombre</label>
+        <input type="email" class="form-control border border-secondary" id="name" placeholder="nombre">
+        
+        <label class="fw-bold mt-2" for="lastname">Apellido</label>
+        <input type="email" class="form-control border border-secondary" id="lastname" placeholder="apellido">
+
+        <label class="fw-bold mt-2" for="acaount">Cuenta</label>
+        <input type="email" class="form-control border border-secondary" id="acaount" placeholder="name@example.com">
+
+        <label class="fw-bold mt-2" for="password">Contraseña</label>
+        <input type="password" class="form-control border border-secondary" id="password" placeholder="Contraseña">
+            
+        <label class="fw-bold mt-2" for="confirmPassword">Confirmar contraseña</label>
+        <input type="password" class="form-control border border-secondary" id="confirmPassword" placeholder="Confirmar contraseña">
+            
+    </form>
+
+    <p class="text-center mt-3 mb-1">Primera vez?</p>
+
+    <a routerLink="/signup" class="card p-1 mx-auto text-decoration-none customCard btnAcount">
+        <p class="text-center m-0">Crea tu cuenta personal</p>
+    </a>
+</section>
