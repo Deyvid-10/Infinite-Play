@@ -17,5 +17,18 @@ input
 
 .space
 {
-    padding-bottom:10%;
+    padding:3% 0 5% 0;
+}
+
+@media(max-width: 576px)
+{
+    .customCard
+    {
+        width: 90%;
+    }
+
+    .space
+    {
+        padding: 10% 0;
+    }
 }

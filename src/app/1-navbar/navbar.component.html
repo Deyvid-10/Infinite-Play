@@ -56,14 +56,16 @@
 
 <app-nav-links class="d-block d-sm-none" [showMenu]="showMenu" [currentPage]="currentPage"></app-nav-links>           
 
-<form [formGroup]="searchForm" *ngIf="showSearch === true || currentPage === '/productos' ||screenSize === true" class="d-flex p-1 mx-auto searchForm">
-    <input formControlName="search" type="text" class="form-control border border-secondary" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="button-addon2">
-    <div class="customButtonDesabled">
-        <button (click)="getSearch()" [disabled]="searchForm.invalid" class="btn btn-danger ms-1 border border-danger px-4 position-relative" type="submit" id="button-addon2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search mb-2" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-            </svg>
-        </button>
+<form [formGroup]="searchForm" *ngIf="showSearch === true || currentPage === '/productos' ||screenSize === true" class="d-flex justify-content-center w-100 bg-light p-1">
+    <div class="d-flex searchForm">
+        <input formControlName="search" type="text" class="form-control border border-secondary" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="customButtonDesabled">
+            <button (click)="getSearch()" [disabled]="searchForm.invalid" class="btn btn-danger ms-1 border border-danger px-4 position-relative" type="submit" id="button-addon2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search mb-2" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </button>
+        </div>
     </div>
 </form>
 

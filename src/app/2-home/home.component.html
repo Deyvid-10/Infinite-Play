@@ -1,12 +1,12 @@
-<app-carousel></app-carousel>
+<app-carousel class="bg-light"></app-carousel>
 
-<section class="p-4">
+<section class="p-4 bg-light">
     <h2 class="text-center mb-3">Articulos destacados</h2>
 
     <app-articles [articles]="articlesOutstanding"></app-articles>
 </section>
 
-<section class="p-4 bgPlataform">
+<section class="p-4 bgPlataform bg-light">
     <h2 class="text-center mb-3">Plataformas</h2>
     <div class="d-flex flex-wrap justify-content-center">
         <a routerLink="/productos" class="mb-3 text-decoration-none" *ngFor="let info of plataformInfo">

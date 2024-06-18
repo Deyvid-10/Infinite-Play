@@ -33,7 +33,7 @@ export class FooterComponent {
 
     if(!regexEmail.test(this.messageForm.value.email))
     {
-      this.alert.messageAlert("Este no es un correo válido", "error")
+      this.alert.messageAlert("Campo para e-mail con formato inválido", "error")
       
       return
     }
