@@ -3,46 +3,46 @@
     <form [formGroup]="acountForm" class="card p-3 p-sm-4 customCard mx-auto">
         <h4>{{currentPage === '/login'? 'Iniciar sesión': currentPage === '/signup' ? "Crear cuenta": "Configurar cuenta"}}</h4>
 
-        <section *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
-            <label class="fw-bold" for="myName">Nombre</label>
+        <section class="mb-2" *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
+            <label class="" for="myName">Nombre</label>
             <input formControlName="name" type="text" class="form-control border border-secondary" id="myName" placeholder="Nombre">
         </section>
         
-        <section *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
-            <label class="fw-bold mt-2" for="lastname">Apellido</label>
+        <section class="mb-2" *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
+            <label class="" for="lastname">Apellido</label>
             <input formControlName="lastName" type="text" class="form-control border border-secondary" id="lastname" placeholder="Apellido">
         </section>
 
-        <section>
-            <label class="fw-bold mt-2" for="acaount">Cuenta</label>
+        <section class="mb-2">
+            <label class="" for="acaount">Cuenta</label>
             <p *ngIf="showWarnningAcount === true" class="text-danger m-0 mb-1">Campo para cuenta con formato inválido</p>
             <input formControlName="acount" type="email" class="form-control border border-secondary" id="acaount" placeholder="name@example.com">
         </section>
 
-        <section>
-            <label class="fw-bold mt-2" for="password">Contraseña</label>
+        <section class="mb-2">
+            <label class="" for="password">Contraseña</label>
             <p *ngIf="showWarnningPass === true" class="text-danger m-0 mb-1">Contraseña requiere al menos una mayúscula, al menos una minúscula, al menos un número, un mínimo de 8 caracteres y no debe poseer espacios en blanco.</p>
             <input formControlName="password" type="password" class="form-control border border-secondary" id="password" placeholder="Contraseña">
         </section>
          
-        <section *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
-            <label for="confirmPassword" class="fw-bold mt-2">Confirmar contraseña</label>
+        <section class="mb-2" *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
+            <label for="confirmPassword" class="">Confirmar contraseña</label>
             <p *ngIf="showWarnningConfirmPass === true" class="text-danger m-0 mb-1">Las contraseñas no coinciden</p>
             <input formControlName="confirmPassword" type="password" class="form-control border border-secondary" id="confirmPassword" placeholder="Confirmar contraseña">
         </section>
                        
-        <section *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
-            <label class="fw-bold mt-2" for="address">Dirección de envío</label>
+        <section class="mb-2" *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
+            <label class="" for="address">Dirección de envío</label>
             <input formControlName="address" type="text" class="form-control border border-secondary" id="address" placeholder="Dirección de envío">
         </section>
            
-        <section *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
-            <label class="fw-bold mt-2" for="tel">Teléfono</label>
+        <section class="mb-2" *ngIf="currentPage === '/config-acount' || currentPage === '/signup'">
+            <label class="" for="tel">Teléfono</label>
             <p *ngIf="showWarnningTel === true" class="text-danger m-0 mb-1">Campo para teléfono con formato inválido.</p>
             <input formControlName="tel" type="text" class="form-control border border-secondary" id="tel" placeholder="Teléfono">
         </section>
           
-        <div class="mt-3 customButtonDesabled"><button type="submit" (click)="getAcount()" [disabled]="acountForm.invalid" class="btn btn-danger w-100">{{currentPage === '/login'? 'Iniciar sesión': currentPage === '/signup' ? "Crear cuenta": "Guardar"}}</button></div>
+        <div class="mt-2 customButtonDesabled"><button type="submit" (click)="getAcount()" [disabled]="acountForm.invalid" class="btn btn-danger w-100">{{currentPage === '/login'? 'Iniciar sesión': currentPage === '/signup' ? "Crear cuenta": "Guardar"}}</button></div>
     </form>
 
     <p *ngIf="currentPage === '/login'" class="text-center mt-3 mb-1">Primera vez?</p>

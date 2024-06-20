@@ -1,0 +1,32 @@
+<section class="customContainer pb-2">
+    <div class="card p-2">                
+        <div class="d-flex border-bottom border-secondary-subtle p-2 pt-0">
+            <h5 class="m-0">Pedidos pendientes</h5>
+        </div>
+            
+        <table *ngIf="perdingArticles.length !== 0" class="table table-hover mt-2 mb-0">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Portada</th>
+                    <th>Articulo</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody class="">
+                <tr class="" *ngFor="let article of perdingArticles">
+                    <th>{{article.id}}</th>
+                    <td class="imgContainer"><img src="{{article.img}}" alt="Articulo {{article.title}}"></td>
+                    <td>{{article.title}}</td>
+                    <td>{{article.quantity}}</td>
+                    <td>RD$ {{article.price.toLocaleString("en-US")}}</td>
+                    <td>RD$ {{(article.price * article.quantity).toLocaleString("en-US")}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p *ngIf="perdingArticles.length == 0" class="text-center mt-4">Aún no has publicado artículos</p>
+    </div>
+</section>

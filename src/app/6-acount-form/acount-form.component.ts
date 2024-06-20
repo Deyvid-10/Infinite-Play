@@ -52,7 +52,10 @@ export class AcountFormComponent {
         acount: ["", Validators.required],
         password: ["", Validators.required]
         })
-    }     
+    } 
+    
+    // Coloca el título de la pestaña
+    window.document.title = `${this.currentPage === "/login" ? "Iniciar sesión": this.currentPage === "/signup" ? "Crear cuenta" : "Configurar cuenta"} - Infinite Play`
    }
 
   //Validar si algunos campos ingresados  estructura

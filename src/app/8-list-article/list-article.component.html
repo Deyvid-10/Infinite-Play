@@ -1,0 +1,35 @@
+<section class="customContainer pb-2">
+    <div class="card p-2">                
+        <div class="d-flex border-bottom border-secondary-subtle p-2 pt-0">
+            <h5 class="m-0">Artículos publicados</h5>
+        </div>
+
+        <button class="mx-auto mt-3 mb-0 border border-secondary rounded-5 px-2 customButtonSecondary customAddButton">Agregar producto</button>
+    
+        <table *ngIf="publishedArticles.length !== 0" class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Portada</th>
+                    <th>Articulo</th>
+                    <th>Stock</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody class="">
+                <tr class="" *ngFor="let article of publishedArticles">
+                    <th>{{article.id}}</th>
+                    <td class="imgContainer"><img src="{{article.img}}" alt="Articulo {{article.title}}"></td>
+                    <td>{{article.title}}</td>
+                    <td>2</td>
+                    <td class="d-flex flex-column">
+                        <button class="m-0 me-2 mt-2 border border-secondary rounded-5 px-2 customButtonSecondary">Editar</button>
+                        <button class="m-0 me-2 mt-2 border border-secondary rounded-5 px-2 customButtonSecondary">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p *ngIf="publishedArticles.length == 0" class="text-center mt-4">Aún no has publicado artículos</p>
+    </div>
+</section>

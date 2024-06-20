@@ -95,9 +95,10 @@ body
   -webkit-line-clamp: 4; 
 }
 
-.customImg
+.containerCustomImgArticleList, .containerCustomImgArticleList img
 {
-  width: 200px;
+    width: 200px;
+    height: 200px;
 }
 
 .containerCustomImgArticle
@@ -109,6 +110,24 @@ body
 {
     margin: 0 auto;
     width: 1300px;
+}
+
+.imgContainer
+{
+    width: 70px;
+    height: 70px;
+}
+
+.imgContainer img
+{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.customAddButton
+{
+    width: 300px;
 }
 
 @media (max-width: 1400px) 
