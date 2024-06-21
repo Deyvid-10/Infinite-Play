@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
-import { SweetAlertService } from '../sweet-alert.service';
+import { SweetAlertService } from '../services/sweet-alert.service';
 
 @Component({
   selector: 'app-acount-form',

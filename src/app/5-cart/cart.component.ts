@@ -1,21 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { SweetAlertService } from '../sweet-alert.service';
-import { DataService } from '../data.service';
-import { ManageVariableService } from '../manage-variable.service';
-
-
-// Creando la interface para definir el tipo de datos que tendrán los objetos del artículo 
-//para el carrito
-
-interface TypesToArticlesCart
-{
-  id: number
-  title: string
-  description:string
-  price: number
-  img: string
-  quantity: number
-}
+import { SweetAlertService } from '../services/sweet-alert.service';
+import { DataService } from '../services/data.service';
+import { ManageVariableService } from '../services/manage-variable.service';
+import { TypesToArticlesCart } from '../interfaces/types-to-articles-cart';
 
 @Component({
   selector: 'app-cart',

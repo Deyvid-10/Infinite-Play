@@ -1,7 +1,7 @@
 import { Component, HostListener, inject } from '@angular/core';
   import { Router, NavigationEnd } from '@angular/router';
-import { DataService } from '../data.service';
-import { ManageVariableService } from '../manage-variable.service';
+import { DataService } from '../services/data.service';
+import { ManageVariableService } from '../services/manage-variable.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

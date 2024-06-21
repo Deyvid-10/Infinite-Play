@@ -1,26 +1,6 @@
 import { Injectable} from '@angular/core';
-
-// Creando la interface para definir el tipo de datos que tendrán los objetos del artículo general
-interface TypesToArticles
-{
-  id: number
-  title: string
-  description:string
-  price: number
-  img: string
-}
-
-// Creando la interface para definir el tipo de datos que tendrán los objetos del artículo 
-//para el carrito
-interface TypesToArticlesCart
-{
-  id: number
-  title: string
-  description:string
-  price: number
-  img: string
-  quantity: number
-}
+import { TypesToArticles } from '../interfaces/type-to-articles';
+import { TypesToArticlesCart } from '../interfaces/types-to-articles-cart';
 
 @Injectable({
   providedIn: 'root'

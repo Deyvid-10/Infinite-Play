@@ -1,22 +1,7 @@
 import { Component, inject} from '@angular/core';
-import { DataService } from '../data.service';
-
-// Tipado para el objeto de articulos
-interface TypesToArticles
-{
-  id: number
-  title: string
-  description:string
-  price: number
-  img: string
-}
-
-// Tipado para los iconos de las plataformas
-interface TypesToPlataform
-{
-  name: string,
-  img: string
-}
+import { DataService } from '../services/data.service';
+import { TypesToArticles } from '../interfaces/type-to-articles';
+import { TypesToPlataform } from '../interfaces/types-to-plataform';
 
 @Component({
   selector: 'app-home',

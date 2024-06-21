@@ -1,16 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { DataService } from '../data.service';
-
-// Tipado para los objetos de los acticulos
-interface TypesToArticlesCart
-{
-  id: number
-  title: string
-  description:string
-  price: number
-  img: string
-  quantity: number
-}
+import { DataService } from '../services/data.service';
+import { TypesToArticlesCart } from '../interfaces/types-to-articles-cart';
 
 @Component({
   selector: 'app-pending-orders',

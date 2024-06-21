@@ -1,15 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { DataService } from '../data.service';
-
-// Tipado para los objetos dentro del array de articulos
-interface TypesToArticles
-{
-  id: number
-  title: string
-  description:string
-  price: number
-  img: string
-}
+import { DataService } from '../services/data.service';
+import { TypesToArticles } from '../interfaces/type-to-articles';
 
 @Component({
   selector: 'app-products',

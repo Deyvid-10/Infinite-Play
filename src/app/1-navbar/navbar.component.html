@@ -1,4 +1,4 @@
-<nav class="bg-light px-md-5 px-sm-3 p-2 py-2 d-flex justify-content-between align-items-center customSize">
+<nav class="bg-white px-md-5 px-sm-3 p-2 py-2 d-flex justify-content-between align-items-center customSize">
         <a class="navbar-brand fs-5 d-flex align-items-center customLogo" routerLink="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="m-1 text-danger" viewBox="0 0 16 16">
                 <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2"/>
@@ -59,7 +59,7 @@
 
 <app-nav-links class="d-block d-sm-none" [showMenu]="showMenu" [currentPage]="currentPage"></app-nav-links>           
 
-<form [formGroup]="searchForm" *ngIf="showSearch === true || currentPage === '/productos' ||screenSize === true" class="d-flex justify-content-center w-100 bg-light p-1">
+<form [formGroup]="searchForm" *ngIf="showSearch === true || currentPage === '/productos' ||screenSize === true" class="d-flex justify-content-center w-100 bg-white p-1">
     <div class="d-flex searchForm">
         <input formControlName="search" type="text" class="form-control border border-secondary" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="button-addon2">
         <div class="customButtonDesabled">

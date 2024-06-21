@@ -1,5 +1,5 @@
 import { Component, inject} from '@angular/core';
-import { SweetAlertService } from '../sweet-alert.service';
+import { SweetAlertService } from '../services/sweet-alert.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

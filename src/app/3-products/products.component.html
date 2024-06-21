@@ -1,7 +1,7 @@
-<section class="py-1 d-block d-md-flex bg-light">
+<section class="py-1 d-block d-md-flex bg-white">
     <button (click)="filterMenu()" class="d-md-none me-5 m-0 mb-2 ms-5 border border-secondary rounded-5 px-2 customButtonSecondary" type="button">Filtrar</button>
     <div (click)="filterMenu()" *ngIf="showFilter === true" class="position-fixed top-0 left-0 z-1 backdrop d-md-none"></div>
-    <section [ngClass]="{'d-none': showFilter === false}" class="d-md-flex justify-content-center bg-light z-2 py-2 overflow-y-auto filterContainer">
+    <section [ngClass]="{'d-none': showFilter === false}" class="d-md-flex justify-content-center bg-white z-2 py-2 overflow-y-auto filterContainer">
         <section >
             <div class="d-flex justify-content-between">
                 <h6>Filtros</h6>
