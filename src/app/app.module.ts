@@ -16,6 +16,8 @@ import { AcountFormComponent } from './6-acount-form/acount-form.component';
 import { AddArticleComponent } from './7-add-article/add-article.component';
 import { ListArticleComponent } from './8-list-article/list-article.component';
 import { PendingOrdersComponent } from './9-pending-orders/pending-orders.component';
+import { ViewProductsComponent } from './4-view-products/view-products.component';
+import { SuggestionsComponent } from './suggestions/suggestions.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { PendingOrdersComponent } from './9-pending-orders/pending-orders.compon
     AcountFormComponent,
     AddArticleComponent,
     ListArticleComponent,
-    PendingOrdersComponent
+    PendingOrdersComponent,
+    ViewProductsComponent,
+    SuggestionsComponent
   ],
   imports: [
     BrowserModule,

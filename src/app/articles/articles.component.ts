@@ -11,8 +11,9 @@ import { TypesToArticles } from '../interfaces/type-to-articles';
 })
 
 export class ArticlesComponent {
-  // Obtiene los datos del artículos que se pasaron a través del componente
+  // Parametros para el componente
   @Input() articles: TypesToArticles[] = []
+  @Input() suggestion: boolean = false
 
   // Inyectando el servicio donde están guardados los datos para los artículos del carrito y 
   // el servicio para los sweetAlert

@@ -9,17 +9,17 @@
             
                 <div class="row mx-3">
                     <p class="col-6 p-0 mb-1">Sub-total ({{quantity}} articulos):</p>
-                    <p class="col-6 p-0 mb-1 text-end">RD$ {{sub_total.toLocaleString('en-US')}}</p>
+                    <p class="col-6 p-0 mb-1 text-end">RD${{sub_total.toLocaleString('en-US')}}</p>
                 </div>
 
                 <div class="row border-bottom border-secondary-subtle mx-2 px-2">
                     <p class="col-6 p-0">Impuestos (18%):</p>
-                    <p class="col-6 p-0 text-end">RD$ {{(sub_total * 0.18).toLocaleString('en-US')}}</p>
+                    <p class="col-6 p-0 text-end">RD${{(sub_total * 0.18).toLocaleString('en-US')}}</p>
                 </div>
 
                 <div class="row mx-3">
                     <p class="col-6 p-0">Total de orden:</p>
-                    <p class="col-6 p-0 text-end">RD$ {{(sub_total + (sub_total * 0.18)).toLocaleString('en-US')}}</p>
+                    <p class="col-6 p-0 text-end">RD${{(sub_total + (sub_total * 0.18)).toLocaleString('en-US')}}</p>
                 </div>
 
                 <div class="mx-3 d-flex justify-content-center customButtonDesabled"><button (click)="toPay()" [disabled]="articlesCart.length == 0" type="button" class="btn btn-danger w-100">Completar pedido</button></div>
@@ -65,12 +65,12 @@
                                     <option value=9 [selected]="article.quantity == 9">9</option>
                                     <option value=10>+10</option>
                                   </select>
-                                  <input *ngIf="article.quantity >= 10" value={{article.quantity}} (change)="quantityFromCart($event, article)" class="m-0 me-2 my-2 border rounded-5 px-3 customInputSecondary" type="number" >
+                                  <input *ngIf="article.quantity >= 10" value={{article.quantity}} (change)="quantityFromCart($event, article)" class="m-0 me-2 border-secondary my-2 border rounded-5 px-3 customInputSecondary" type="number" >
                             </div>
                             
                             <div class="text-start text-md-end mt-1">
-                                <p class="m-0">Precio: RD$ {{article.price.toLocaleString('en-US')}}</p>
-                                <h6 class="m-0">{{article.quantity}} articulos: RD$ {{(article.quantity * article.price).toLocaleString('en-US')}}</h6>
+                                <p class="m-0">Precio: RD${{article.price.toLocaleString('en-US')}}</p>
+                                <h6 class="m-0">{{article.quantity}} articulos: RD${{(article.quantity * article.price).toLocaleString('en-US')}}</h6>
                             </div>
                         </div>
                     </div>
@@ -81,4 +81,5 @@
             </section>
         </section>
     </section>
+    <app-suggestions></app-suggestions>
 </section>

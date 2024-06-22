@@ -1,17 +1,41 @@
-.pp
+.minImg
 {
     width: 50px;
     height: 50px;
-    background-color: blue;
 }
 
-.cc
+.imgsContainer
 {
-    width: 300px;
+    max-width: 400px;
+}
+
+.imgs
+{
+    width: max-content;
+}
+
+.textContainer
+{
+    width: 500px;
 }
 
 .rates p
 {
     margin-top: 2px;
     margin-bottom: 5px;
+}
+
+@media (max-width: 992px) 
+{
+    .imgsContainer
+    {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .textContainer
+    {
+        width: 100%;
+    }
 }

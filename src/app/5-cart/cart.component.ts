@@ -16,7 +16,7 @@ export class CartComponent {
   // el servicio para los sweetAlert
   private alert = inject (SweetAlertService)
   private data = inject (DataService)
-  private manageVariavle  = inject (ManageVariableService)
+  private manageVariable  = inject (ManageVariableService)
 
   // Declarando variables para el detalle de pago y los datos de los artículos en el carrito  
   sub_total: number = 0
@@ -35,20 +35,20 @@ export class CartComponent {
   // Función que actualiza los datos en pantalla
   updateData(): void
   {
-    this.manageVariavle.updateQuantity().subscribe(value => {
+    this.manageVariable.updateQuantity().subscribe(value => {
       this.quantity  = value
     })
 
-    this.manageVariavle.updateSubTotal().subscribe(value => {
+    this.manageVariable.updateSubTotal().subscribe(value => {
       this.sub_total  = value
     })
-    this.manageVariavle.updateArticlesCart().subscribe(value => {
+    this.manageVariable.updateArticlesCart().subscribe(value => {
       this.articlesCart  = value
     })
 
     this.articlesCart = this.data.updateArticlesCart()
 
-    this.manageVariavle.updateDetail(this.articlesCart)
+    this.manageVariable.updateDetail(this.articlesCart)
   }
 
   // Función para ejecutar el pago

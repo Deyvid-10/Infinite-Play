@@ -59,9 +59,15 @@ body
     background-color: rgb(250, 250, 250);
 }
 
+.customButtonSecondary
+{
+    height: 24.8px;
+}
+
 .customInputSecondary
 {
-    width: 90px;
+    width: 70px;
+    height: 24.8px;
 }
 
 .customButtonSecondary:hover
@@ -165,5 +171,10 @@ body
     .customImg
     {
         width: 150px;
+    }
+
+    .customContainer
+    {
+        padding: 0 8px;
     }
 }

@@ -1,36 +1,89 @@
-<section class="customContainer d-flex pt-2 mb-2">
-    <figure class="d-flex">
-        <figure class="bg-primary mx-2 pp">
-            dsadsadsadasda
-        </figure>
-        <figure class="cc">
-            <img class="w-100" src="{{articleItem?.img}}" alt="imagen {{articleItem?.title}}">
-        </figure>
-    </figure>
-    <section class="mx-3">
-        <h3 class="mb-0">{{articleItem?.title}}</h3>
-        <h6 class=" mb-0">Marca: <span class="fw-normal mt-2">Supermarca</span></h6>
-        <section class="d-flex rates p-0 border-bottom">
-            <p class="me-1">3.6</p>
-            <figure class="stars m-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-half text-warning" viewBox="0 0 16 16">
-                    <path d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
-                 <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-                </svg>
+<section  class="customContainer">
+    <section class="d-block d-md-flex justify-content-center pt-2 mb-2">
+        <figure class="d-flex flex-column align-items-center">
+            <figure class="imgsContainer">
+                <img class="w-100" src="{{articleItem?.img}}" alt="imagen {{articleItem?.title}}">
             </figure>
-            <p class="ms-1">(36,666 calificaciones)</p>
+            <figure class="overflow-x-auto imgsContainer">
+                <div class="d-flex imgs">
+                    <div class="bg-primary mx-2 minImg">
+                        <img class="objectfit-contain w-100 h-100" src="./assets/img/nba-2k24.webp" alt="">
+                    </div>
+                    <div class="bg-primary mx-2 minImg">
+                        <img class="objectfit-contain w-100 h-100" src="./assets/img/nba-2k24.webp" alt="">
+                    </div>
+                    <div class="bg-primary mx-2 minImg">
+                        <img class="objectfit-contain w-100 h-100" src="./assets/img/nba-2k24.webp" alt="">
+                    </div>
+                    <div class="bg-primary mx-2 minImg">
+                        <img class="objectfit-contain w-100 h-100" src="./assets/img/nba-2k24.webp" alt="">
+                    </div>
+                    <div class="bg-primary mx-2 minImg">
+                        <img class="objectfit-contain w-100 h-100" src="./assets/img/nba-2k24.webp" alt="">
+                    </div>
+                </div>
+            </figure>
+        </figure>
+        <section class="mx-0 mx-md-3 textContainer">
+            <h3 class="mb-0">{{articleItem?.title}}</h3>
+            <h6 class=" mb-0">Marca: <span class="fw-normal mt-2">Supermarca</span></h6>
+            <section class="d-flex flex-wrap rates p-0 border-bottom">
+                <p class="me-1">3.6</p>
+                <figure class="stars m-0 me-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-half text-warning" viewBox="0 0 16 16">
+                        <path d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                     <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                    </svg>
+                </figure>
+                <p class="">(36,666 calificaciones)</p>
+            </section>
+            <h5 class="mt-2">RD${{articleItem?.price?.toLocaleString('en-US')}}</h5>
+            <section>
+                <p class="m-0">Cantidad: </p>
+                @if (quantity < 10) {
+                    <select (change)="getQuantity($event)" class="mt-0 border border-secondary rounded-5 px-2 cursor-pointer customButtonSecondary">
+                        <option value=1 [selected]="quantity == 1">1</option>
+                        <option value=2 [selected]="quantity == 2">2</option>
+                        <option value=3 [selected]="quantity == 3">3</option>
+                        <option value=4 [selected]="quantity == 4">4</option>
+                        <option value=5 [selected]="quantity == 5">5</option>
+                        <option value=6 [selected]="quantity == 6">6</option>
+                        <option value=7 [selected]="quantity == 7">7</option>
+                        <option value=8 [selected]="quantity == 8">8</option>
+                        <option value=9 [selected]="quantity == 9">9</option>
+                        <option value=10>+10</option>
+                    </select>
+                }
+                @if (quantity >= 10) {
+                <input value={{quantity}} (change)="getQuantity($event)" class="m-0 me-2 border border-secondary rounded-5 px-3 customInputSecondary" type="number" >
+                }
+            </section>
+            <button class="btn btn-danger mt-3 w-100">Agregar al carrito</button>
+            <h5 class="mt-5 border-bottom pb-1">Descripción</h5>
+            <p>{{articleItem?.description}}</p>
+            <h5 class="border-bottom pb-1">Características</h5>
+            <ul>
+                <li><span class="fw-bold">Procesador y Gráficos:</span> CPU AMD Ryzen "Zen 2" de 8 núcleos, GPU RDNA 2 personalizada con 10.28 TFLOPS y Ray Tracing.</li>
+                <li><span class="fw-bold">Memoria y Almacenamiento:</span> 16 GB GDDR6, SSD ultrarrápido de 825 GB, expansión SSD NVMe.</li>
+                <li><span class="fw-bold">Audio 3D:</span> Tempest 3D AudioTech para un sonido envolvente.</li>
+                <li><span class="fw-bold">Controlador DualSense:</span> Retroalimentación háptica, gatillos adaptativos y micrófono integrado.</li>
+                <li><span class="fw-bold">Compatibilidad:</span> Juegos de PS5 y retrocompatibilidad con PS4.</li>
+                <li><span class="fw-bold">Diseño y Conectividad:</span> Estética futurista, puertos USB-C, USB-A, HDMI 2.1, Ethernet, Wi-Fi 6 y Bluetooth 5.1.</li>
+            </ul>
         </section>
-        <h5 class="mt-2">RD${{articleItem?.price?.toLocaleString('us-EN')}}</h5>
-    </section>    
+    </section>
+    
+    <app-suggestions></app-suggestions>
+
 </section>
